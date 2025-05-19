@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigationActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textSize="22sp"
+        android:text="Navigation"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/title">
+
+        <ImageView
+            android:id="@+id/mapImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/map_supermarket"
+            android:contentDescription="Sơ đồ siêu thị" />
+
+        <com.example.shoppingassistance.DrawingView
+            android:id="@+id/drawingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/suggest"
+        android:layout_below="@id/mapContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="22sp"
+        android:text="Suggest Prodcts"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/suggest">
+        <ListView
+            android:id="@+id/list_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"/>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btn_up"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="↑"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btn_down"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="↓"
+            android:textSize="24sp"
+            android:layout_below="@id/btn_up"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="←"
+            android:textSize="24sp"
+            android:layout_toLeftOf="@id/btn_up"
+            android:layout_alignTop="@id/btn_up"
+            android:layout_marginRight="16dp" />
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="→"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/btn_up"
+            android:layout_alignTop="@id/btn_up"
+            android:layout_marginLeft="16dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
