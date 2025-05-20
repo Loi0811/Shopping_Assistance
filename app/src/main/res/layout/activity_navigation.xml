@@ -57,51 +57,7 @@
             android:scrollbars="none"/>
     </ScrollView>
 
-    <RelativeLayout
-        android:id="@+id/control_panel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:padding="16dp">
 
-        <Button
-            android:id="@+id/btn_up"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="↑"
-            android:textSize="24sp"
-            android:layout_centerHorizontal="true" />
-
-        <Button
-            android:id="@+id/btn_down"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="↓"
-            android:textSize="24sp"
-            android:layout_below="@id/btn_up"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"/>
-
-        <Button
-            android:id="@+id/btn_left"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="←"
-            android:textSize="24sp"
-            android:layout_toLeftOf="@id/btn_up"
-            android:layout_alignTop="@id/btn_up"
-            android:layout_marginRight="16dp" />
-
-        <Button
-            android:id="@+id/btn_right"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="→"
-            android:textSize="24sp"
-            android:layout_toRightOf="@id/btn_up"
-            android:layout_alignTop="@id/btn_up"
-            android:layout_marginLeft="16dp" />
-    </RelativeLayout>
 
 
 </RelativeLayout>
