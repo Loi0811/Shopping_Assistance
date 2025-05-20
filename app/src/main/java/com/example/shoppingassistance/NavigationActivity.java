@@ -20,14 +20,6 @@ import java.util.List;
 public class NavigationActivity extends AppCompatActivity {
 
     private DrawingView drawingView;
-    private float[] currentPosition = {1400f, 1300f};
-    private float currentAngle = 0f;// Vị trí ban đầu
-    private float moveStep = 20f;
-    private boolean isUpPressed = false, isDownPressed = false, isLeftPressed = false, isRightPressed = false;
-    private Handler handler = new Handler();
-
-    // Runnable cho từng hướng
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
